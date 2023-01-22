@@ -6,7 +6,7 @@ import classes from "../../styles/propertyDetail.module.css";
 import Image from "next/image";
 import { motion } from "framer-motion"
 
-const propertyDetail = ({ propertyData }) => {
+const PropertyDetail = ({ propertyData }) => {
   const [imageIndex, setImageIndex] = useState(0);
 
   const rightArrow = () => {
@@ -53,7 +53,7 @@ const propertyDetail = ({ propertyData }) => {
   );
 };
 
-export default propertyDetail;
+export default PropertyDetail;
 
 export async function getServerSideProps(context) {
   const propertyId = context.params.propertyId;
